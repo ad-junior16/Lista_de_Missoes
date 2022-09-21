@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+
+
+section {
+    /* background-color: rgb(131, 131, 184); */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 181px;    
+}
+section div header h1 {
+    padding-bottom: 8px;
+    font-size: 48px;
+    font-family: 'Poppins' , sans-serif;
+    color: #001427;
+}
+
+section div header h1 span {
+    font-family: 'Playfair Display' , sans-serif;
+}
+
+.text {
+    padding-bottom: 14px;
+    font-size: 18px;
+
+}
+
+section div header h2 {
+    padding-bottom: 20px;
+    
+    
+}
+
+.inputMission {
+    display: flex;
+    justify-content: center;
+    
+}
+
+input  {
+    height: 45px;
+    width: 752px;
+    font-size: 18px; 
+    border-radius: 5px;
+    border: solid 1px;
+    padding-left: 10px;  
+     
+}
+
+.missao {
+    background-color:  #8D0801;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
+    width: 794px;
+    height: 85px;    
+    display: block;
+    font-family: sans-serif;
+    font-weight: 300;
+    
+    
+}
+h2 {
+    color: #F5F5F5;
+    display: flex;    
+    padding-left: 19px;
+    padding-top: 24px;
+    font-size: 30px;
+    
+}
+
+
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    padding-right: 21px;
+    
+        
+}
+
+.listItem {
+    display: flex;
+    justify-content: left;
+    padding-top: 27px;
+    width: 752px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.delete {
+    display: none;
+}
+
+.buttonDel{
+    border: none;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: 0px;
+        
+}
+
+.textContent {
+    padding-left: 21px;
+    font-family: 'Poppins' , sans-serif;
+        
+}
+
+.done p {
+    text-decoration: line-through;
+}
+
+
+
+    
+
+
+
+
+
+
+
