@@ -23,7 +23,7 @@ function createMission() {
     p.classList.add("textContent")
     p.textContent = input.value
 
-    ul.appendChild(li)
+    ul.insertBefore( li , ul.firstChild);
     input.value = " "
 
     let deleteButton = document.createElement("button")
