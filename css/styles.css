@@ -108,13 +108,26 @@ h2 {
     display: none;
 }
 
-.buttonDel{
+.buttonEdit{
     border: none;
     display: block;
     width: 18px;
     height: 18px;
     margin-left: auto;
     margin-right: 0px;
+    cursor: pointer;
+    padding-right: 25px;
+    
+        
+}
+
+.buttonDel{
+    border: none;
+    display: block;
+    width: 18px;
+    height: 18px;    
+    margin-right: 0px;
+    cursor: pointer;
         
 }
 
@@ -128,7 +141,14 @@ h2 {
     text-decoration: line-through;
 }
 
+.hidden {
+    display: none;
+}
 
+.hiddeninput {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
     
 

@@ -10,6 +10,9 @@ function createMission() {
     let li = document.createElement("li")
     let checkbox = document.createElement("input")
     let p = document.createElement("p")
+    let hiddenInput = document.createElement("input")
+    hiddenInput.classList.add("hidden")
+    hiddenInput.classList.add("hiddeninput")
 
     checkbox.type = "checkbox"
     checkbox.classList.add("checkbox")
@@ -19,6 +22,10 @@ function createMission() {
     li.classList.add("listItem");
 
     li.appendChild(p);
+    li.appendChild(hiddenInput);
+
+    
+    hiddenInput.value = input.value
 
     p.classList.add("textContent")
     p.textContent = input.value
@@ -26,11 +33,24 @@ function createMission() {
     ul.insertBefore( li , ul.firstChild);
     input.value = " "
 
+    let imgEdit = document.createElement("img")
+    imgEdit.src = "./assets/pencil.svg"
+    let editButton = document.createElement("button")
+    editButton.classList.add("buttonEdit")
+    editButton.appendChild(imgEdit)
+    li.appendChild(editButton)
+    editButton.addEventListener("click", editMission)
+
+
+    let imgClose = document.createElement("img")
+    imgClose.src = "./assets/x-lg.svg"
     let deleteButton = document.createElement("button")
     deleteButton.classList.add("buttonDel")
-    deleteButton.appendChild(document.createTextNode("X"))
+    deleteButton.appendChild(imgClose)
     li.appendChild(deleteButton)
     deleteButton.addEventListener("click", deleteMission)
+
+    
 
     function deleteMission() {
 
@@ -56,6 +76,18 @@ function createMission() {
                 
     }
 
+    function editMission(){
+        if(checkbox.checked != true){
+        hiddenInput.classList.remove("hidden")
+        p.classList.add("hidden")
+
+
+        hiddenInput.addEventListener("keypress", function(event){
+            editMissionKeypress(event , hiddenInput , p)
+        })
+    }
+    }
+
 }
 
 function alphaSort(a, b) {
@@ -70,14 +102,23 @@ input.addEventListener("keypress", addMissionKeypress)
 
 function addMissionKeypress() {
     let regex = /(?!\s)([a-zA-Z0-9]){1,}/g
-
-    console.log()
+    
 
     if (inputLength() != "" && regex.test(input.value) && event.which === 13) {
         createMission();
     }
 }
 
+function editMissionKeypress(event , hiddenInput , p) {
+    let regex = /(?!\s)([a-zA-Z0-9]){1,}/g
+    
+        
+    if (regex.test(hiddenInput.value) && event.which === 13) {
+        hiddenInput.classList.add("hidden")
+        p.textContent = hiddenInput.value
+        p.classList.remove("hidden")
+    }
+} 
 
 
 
